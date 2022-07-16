@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+{% block body %}
+    <h3>Dashboard</h3>
+    <hr>
+    <p>
+        Welcome! <small> {{ request.user.username }} </small>
+    </p>
+    <hr>
+    {% if images %}
+        <table class="table">
+            <thead>
+            <tr>
+                <th scope="col">id</th>
+                <th scope="col">Header</th>
+                <th scope="col">Author</th>
+                <th scope="col">Created_date</th>
+                <th scope="col">Update</th>
+                <th scope="col">Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for image in images %}
+                <tr>
+                <th scope="row">{{ image.id }}</th>
+                <td><a href="{% url 'image:detail' image.id %}">{{ image.title }}</a></td>
+                <td>{{ image.author.username }}</td>
+                <td>{{ image.created_date }}</td>
+                <td><a href="/images/update/{{ image.id }}" class="btn btn-warning">Update</a></td>
+                <td><a href="/images/delete/{{ image.id }}" class="btn btn-danger">Delete</a></td>
+                </tr>
+            {% endfor %}
+
+            </tbody>
+        </table>
+
+            {% else %}
+                <div class="alert alert-warning">
+                    You have not uploaded image yet.
+                </div>
+            {% endif %}
+
+        <a class="btn btn-primary" href="{% url 'image:add_image' %}">Add a Image</a>
+
+{% endblock %}

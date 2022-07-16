@@ -1,0 +1,7 @@
+__pycache__
+.env
+db.sqlite3
+package-lock.json
+media
+static
+.idea
