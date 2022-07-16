@@ -2,7 +2,7 @@
 Create a virtual environment
 Install django
 Create .env file same directory manage.py
-And inside the file set up django_secret_key, aws_secret_key, access_key and bucket_name.
+And inside the file set up secret_key, aws_secret_key, access_key and bucket_name.
 Install the packages written below.
 Necessary steps for run the project
 
