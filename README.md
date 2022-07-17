@@ -16,12 +16,6 @@ Necessary steps for run the project
 
 - pip install django-crispy-forms==1.14.0
 
-- pip install django-crispy-forms==1.14.0
-
-- pip install django-crispy-forms==1.14.0
-
-- pip install django-crispy-forms==1.14.0
-
 - pip install django-storages==1.12.3
 
 - pip install Pillow==9.2.0
